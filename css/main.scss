@@ -101,4 +101,42 @@ main{
             --bs-btn-hover-border-color: #d30820;
         }
     }
+    .box-content{
+        width: 500px;
+        @media screen and (max-width:576px) {
+            width: 390px;
+        }
+        @media screen and (max-width: 375px) {
+            width: 290px;
+        }
+        .circles span{
+            width: 20px;
+            height: 20px;
+            &:nth-child(1){
+                background-color: #f15f5d;
+            }
+            &:nth-child(2){
+                background-color: #febe2e;
+            }
+            &:nth-child(3){
+                background-color: #4db748;
+            }
+        }
+        p{
+            @media screen and (max-width: 375px) {
+                font-size: 1.1rem;
+            }
+        }
+        ul li{
+            font-size: 1.125rem;
+            i{
+                color: #bb4120;
+            }
+            p{
+                @media screen and (max-width: 375px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }

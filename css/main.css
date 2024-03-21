@@ -136,4 +136,46 @@ main .table .btn-delete {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #d30820;
   --bs-btn-hover-border-color: #d30820;
+}
+main .box-content {
+  width: 500px;
+}
+@media screen and (max-width: 576px) {
+  main .box-content {
+    width: 390px;
+  }
+}
+@media screen and (max-width: 375px) {
+  main .box-content {
+    width: 290px;
+  }
+}
+main .box-content .circles span {
+  width: 20px;
+  height: 20px;
+}
+main .box-content .circles span:nth-child(1) {
+  background-color: #f15f5d;
+}
+main .box-content .circles span:nth-child(2) {
+  background-color: #febe2e;
+}
+main .box-content .circles span:nth-child(3) {
+  background-color: #4db748;
+}
+@media screen and (max-width: 375px) {
+  main .box-content p {
+    font-size: 1.1rem;
+  }
+}
+main .box-content ul li {
+  font-size: 1.125rem;
+}
+main .box-content ul li i {
+  color: #bb4120;
+}
+@media screen and (max-width: 375px) {
+  main .box-content ul li p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

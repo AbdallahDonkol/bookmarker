@@ -1,6 +1,8 @@
 var siteName = document.getElementById("siteName");
 var siteUrl = document.getElementById("siteUrl");
-
+var box = document.querySelector(".box");
+var btnClose = document.querySelector(".btn-close");
+var boxContent = document.querySelector(".box-content");
 var siteList;
 
 if (localStorage.getItem("websiteList") == null) {
@@ -22,6 +24,8 @@ function createWebsite() {
     localStorage.setItem("websiteList", JSON.stringify(siteList));
     siteName.classList.remove("is-valid");
     siteUrl.classList.remove("is-valid");
+  }else{
+    box.classList.replace("d-none","d-block");
   }
 }
 
@@ -87,3 +91,16 @@ function validateUrl() {
     return false;
   }
 }
+
+//& close popup box
+btnClose.addEventListener("click",function(){
+  closeBox();
+})
+function closeBox(){
+  box.classList.replace("d-block","d-none");
+}
+box.addEventListener("click",function(e){
+  if(!boxContent.contains(e.target)){
+    closeBox();
+  }
+})
